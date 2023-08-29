@@ -54,13 +54,39 @@ body{
     font-weight: 500;
 }
 /*switch*/
+
+#button {
+    position: relative;
+    width: 64px;
+    margin: 4px auto;
+    
+}
 #button button{
     width: 32px;
     height: 32px;
     background: white var(--toggle-img) no-repeat center;
     border: 0;
     border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
     
+
+}
+.light #button button{
+    right: 0;
+    left: initial;
+}
+
+#button span{
+    width: 64px;
+    height: 24px;
+    display: block;
+    border:1px solid var(--stroke-color);
+    background:var(--surface-color);
+    --webkit-backdrop-filter: blur(4px);
+    border-radius: 9999px;
 
 }
 
