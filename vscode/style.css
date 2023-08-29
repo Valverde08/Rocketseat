@@ -4,16 +4,37 @@
     padding: 0px;
     box-sizing: border-box;
 }
+:root{
+    --text-color1:white;
+    --background-img: url(imagens/bg-mobile.jpg);
+    --stroke-color: (255, 255, 255, 0.50);
+    --highlight-color:rgba(0, 0, 0, 0.10);
+    --surface-color:rgba(255, 255, 255, 0.10);
+    --surface-color-hover: rgba(255, 255, 255, 0.05);
+    --toggle-img:url(sun.svg);
+    
+}
+.light {
+    --text-color1:black;
+    --background-img: url(imagens/bg-mobile-light.jpg);
+    --stroke-color: rgba(0, 0, 0, 0.50);
+    --stroke-color:rgba(0, 0, 0, 0.10);
+    --surface-color:rgba(0, 0, 0, 0.05);
+    --surface-color-hover: rgba(0, 0, 0, 0.02);
+    --toggle-img:url(moon-star.svg);
+    
+}
 
 body *{
     font-family: 'Inter', sans-serif;
-    color: white;  
+    color: var(--text-color1)  ;
 }
 body{
-    background: url(imagens/bg-mobile.jpg) no-repeat top center/cover;
+    background: var(--background-img) no-repeat top center/cover;
 }
 #main-container{
     width: 360px;
+    
     margin: auto;
     padding:0px 24px;
     
@@ -32,6 +53,17 @@ body{
 #profile p{
     font-weight: 500;
 }
+/*switch*/
+#button button{
+    width: 32px;
+    height: 32px;
+    background: white var(--toggle-img) no-repeat center;
+    border: 0;
+    border-radius: 50%;
+    
+
+}
+
 ul{
     list-style: none;
     flex-direction: column;
@@ -47,8 +79,8 @@ ul{
 }
 ul li a{
     text-decoration: none;
-    border: 1px solid rgba(255, 255, 255, 0.50);
-    background: rgba(255, 255, 255, 0.10);
+    border: 1px solid var(--stroke-color);
+    background: var(--surface-color);
     display: flex;
     justify-content: center;
     border-radius: 8px;
@@ -62,14 +94,14 @@ ul li a{
 
 }
 ul li a:hover{
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--surface-color-hover);
 
-    border: 2px solid rgb(255, 255, 255); ;
+    border: 2px solid var(--stroke-color);
 }
 #social {
     padding: 24px;
     width: 312px;
-    height: 40px;
+    
     font-size: 24px;
 
 }
@@ -91,8 +123,14 @@ ul li a:hover{
 
 }
 #social a:hover{
-    background:  rgba(255, 255, 255, 0.2);
+    background:  var(--highlight-color);
     padding: 16px;
     border-radius: 50%;
 
+}
+footer {
+    padding: 24px 0;
+    text-align: center;
+    font-size: 14px;
+    
 }
