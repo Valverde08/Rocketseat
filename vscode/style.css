@@ -33,7 +33,8 @@ body{
     background: var(--background-img) no-repeat top center/cover;
 }
 #main-container{
-    width: 360px;
+    width: 100%;
+    max-width: 588px;
     
     margin: auto;
     padding:0px 24px;

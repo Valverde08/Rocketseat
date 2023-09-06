@@ -8,13 +8,13 @@ function toggleMode(){
     const img = document.querySelector("#profile img")
 
     if(body.classList.contains("light")){
-        body.classList.remove("ligth");
         
-        img.src = "imagens/avatar.png"
+        
+        img.src = "imagens/avatar-light.png"
 
         
     } else {
-        body.classList.add("ligth");
+        
         
         img.src = "imagens/avatar.png"
     }
