@@ -8,7 +8,8 @@
     --text-color1:white;
     --background-img: url(imagens/bg-mobile.jpg);
     --stroke-color: (255, 255, 255, 0.50);
-    --highlight-color:rgba(0, 0, 0, 0.10);
+    --highlight-color:rgba(255, 255, 255, 0.20);
+    
     --surface-color:rgba(255, 255, 255, 0.10);
     --surface-color-hover: rgba(255, 255, 255, 0.05);
     --toggle-img:url(sun.svg);
@@ -19,6 +20,7 @@
     --background-img: url(imagens/bg-mobile-light.jpg);
     --stroke-color: rgba(0, 0, 0, 0.50);
     --stroke-color:rgba(0, 0, 0, 0.10);
+    --highlight-color:rgba(0, 0, 0, 0.10);
     --surface-color:rgba(0, 0, 0, 0.05);
     --surface-color-hover: rgba(0, 0, 0, 0.02);
     --toggle-img:url(moon-star.svg);
@@ -73,12 +75,17 @@ body{
     left: 0;
     top: 50%;
     transform: translateY(-50%);
+
+    animation: slide-out 0.2s ;
     
 
 }
 .light #button button{
-    right: 0;
-    left: initial;
+   animation: slide-in 0.3s forwards;
+   
+}
+#button button:hover{
+    outline: 8px solid  var(--highlight-color);
 }
 
 #button span{
@@ -171,5 +178,25 @@ footer {
     }
     .light{
         --background-img: url(imagens/bg-desktop-light.jpg);
+    }
+}
+
+/*animation*/
+@keyframes slide-in{
+    from{
+        left: 0;
+
+    }
+    to{
+        left: 50%;
+    }
+}
+@keyframes slide-out{
+    from{
+        left: 50%;
+
+    }
+    to{
+        left: 0;
     }
 }
