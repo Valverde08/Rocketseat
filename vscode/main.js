@@ -12,7 +12,7 @@ function toggleMode(){
         
     } else {
         
-        img.setAttribute("src ","imagens/avatarS.png")
+        img.setAttribute("src ","imagens/avatar.png")
     }
 
 }
